@@ -19,6 +19,7 @@ class CreateApplicationTable extends Migration
             $table->string('username');
             $table->string('email');
             $table->string('password');
+            $table->string('password_confirmation');
             $table->boolean('is_approved')->default(false);
             $table->timestamps();
         });

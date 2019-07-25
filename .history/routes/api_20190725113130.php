@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,5 +21,5 @@ Route::get('/application','ApplicationController@index');
 Route::post('/application','ApplicationController@store');
 Route::put('/application/{id}','ApplicationController@edit');
 Route::delete('/application/{id}','ApplicationController@delete');
-Route::put('/application/{id}/approve','ApplicationController@approve');
+//Route::put('/application/{id}/approve','ApplicationController@approve');
 

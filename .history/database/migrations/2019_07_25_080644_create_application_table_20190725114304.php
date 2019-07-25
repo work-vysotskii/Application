@@ -13,15 +13,13 @@ class CreateApplicationTable extends Migration
      */
     public function up()
     {
-        Schema::create('applications', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('full_name');
-            $table->string('username');
-            $table->string('email');
-            $table->string('password');
-            $table->boolean('is_approved')->default(false);
-            $table->timestamps();
-        });
+        return [
+            'full_name' => 'string|min:3|max:48',
+            'username' => 'required|min:3|max:200',
+            'password'=> 'password',
+            'password_confirmation'=> 'password_confirmation',
+            'email' => 'email',
+            ];
     }
 
     /**
